@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Proyectos</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+        button,hr,input{overflow:visible}progress,sub,sup{vertical-align:baseline}[type=checkbox],[type=radio],legend{box-sizing:border-box;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}details,main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{padding:.35em .75em .625em}legend{color:inherit;display:table;max-width:100%;white-space:normal}textarea{overflow:auto}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}[hidden],template{display:none}
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --fuente: 'Open Sans', sans-serif;
+            --fondo: #ffffff;
+            --ancho-contenedor: 1200px;
+        }
+
+        body {
+            background: var(--fondo);
+            font-family: var(--fuente);
+            font-size: 18px;
+        }
+
+        h2,
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            line-height: 27px;
+        }
+
+        img {
+            vertical-align: center;
+            width: 100%;
+        }
+
+        .contenedor {
+            max-width: 90%;
+            width: var(--ancho-contenedor);
+            margin: 20px auto;
+            overflow: hidden;
+        }
+
+        .contenedor-ancho {
+            width: 100%;
+            padding: 0 40px;
+            margin: 20px auto;
+        }
+
+        .grid {
+            display: grid;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .col-1 {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .col-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .col-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .col-4 {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .col-5 {
+            grid-template-columns: repeat(5, 1fr);
+        }
+
+        .col-6 {
+            grid-template-columns: repeat(6, 1fr);
+        }
+
+        .col-7 {
+            grid-template-columns: repeat(7, 1fr);
+        }
+
+        .col-8 {
+            grid-template-columns: repeat(8, 1fr);
+        }
+
+        .col-9 {
+            grid-template-columns: repeat(9, 1fr);
+        }
+
+        .col-10 {
+            grid-template-columns: repeat(10, 1fr);
+        }
+
+        .col-11 {
+            grid-template-columns: repeat(11, 1fr);
+        }
+
+        .col-12 {
+            grid-template-columns: repeat(12, 1fr);
+        }
+
+        .span-1 {
+            grid-column: span 1;
+        }
+
+        .span-2 {
+            grid-column: span 2;
+        }
+
+        .span-3 {
+            grid-column: span 3;
+        }
+
+        .span-4 {
+            grid-column: span 4;
+        }
+
+        .span-5 {
+            grid-column: span 5;
+        }
+
+        .span-6 {
+            grid-column: span 6;
+        }
+
+        .span-7 {
+            grid-column: span 7;
+        }
+
+        .span-8 {
+            grid-column: span 8;
+        }
+
+        .span-9 {
+            grid-column: span 9;
+        }
+
+        .span-10 {
+            grid-column: span 10;
+        }
+
+        .span-11 {
+            grid-column: span 11;
+        }
+
+        .span-12 {
+            grid-column: span 12;
+        }
+
+        @media screen and (max-width: 992px) {
+            .med-col-1 {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .med-col-2 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .med-col-3 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .med-col-4 {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .med-col-5 {
+                grid-template-columns: repeat(5, 1fr);
+            }
+
+            .med-col-6 {
+                grid-template-columns: repeat(6, 1fr);
+            }
+
+            .med-col-7 {
+                grid-template-columns: repeat(7, 1fr);
+            }
+
+            .med-col-8 {
+                grid-template-columns: repeat(8, 1fr);
+            }
+
+            .med-col-9 {
+                grid-template-columns: repeat(9, 1fr);
+            }
+
+            .med-col-10 {
+                grid-template-columns: repeat(10, 1fr);
+            }
+
+            .med-col-11 {
+                grid-template-columns: repeat(11, 1fr);
+            }
+
+            .med-col-12 {
+                grid-template-columns: repeat(12, 1fr);
+            }
+
+            .med-span-1 {
+                grid-column: span 1;
+            }
+
+            .med-span-2 {
+                grid-column: span 2;
+            }
+
+            .med-span-3 {
+                grid-column: span 3;
+            }
+
+            .med-span-4 {
+                grid-column: span 4;
+            }
+
+            .med-span-5 {
+                grid-column: span 5;
+            }
+
+            .med-span-6 {
+                grid-column: span 6;
+            }
+
+            .med-span-7 {
+                grid-column: span 7;
+            }
+
+            .med-span-8 {
+                grid-column: span 8;
+            }
+
+            .med-span-9 {
+                grid-column: span 9;
+            }
+
+            .med-span-10 {
+                grid-column: span 10;
+            }
+
+            .med-span-11 {
+                grid-column: span 11;
+            }
+
+            .med-span-12 {
+                grid-column: span 12;
+            }
+        }
+
+        @media screen and (max-width: 576px) {
+            .peq-col-1 {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .peq-col-2 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .peq-col-3 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .peq-col-4 {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .peq-col-5 {
+                grid-template-columns: repeat(5, 1fr);
+            }
+
+            .peq-col-6 {
+                grid-template-columns: repeat(6, 1fr);
+            }
+
+            .peq-col-7 {
+                grid-template-columns: repeat(7, 1fr);
+            }
+
+            .peq-col-8 {
+                grid-template-columns: repeat(8, 1fr);
+            }
+
+            .peq-col-9 {
+                grid-template-columns: repeat(9, 1fr);
+            }
+
+            .peq-col-10 {
+                grid-template-columns: repeat(10, 1fr);
+            }
+
+            .peq-col-11 {
+                grid-template-columns: repeat(11, 1fr);
+            }
+
+            .peq-col-12 {
+                grid-template-columns: repeat(12, 1fr);
+            }
+        }
+
+        .nav {
+            background: #333;
+            padding: 10px 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav .contenedor {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+
+        .nav a:hover {
+            background: #555;
+            border-radius: 5px;
+        }
+
+        .nav .logo {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+
+        .nav .boton {
+            background: #4c72b3;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .nav .boton:hover {
+            background: #1f3a74;
+        }
+
+        /* Estilo para el footer */
+        footer {
+            background-color: #2e333e;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Estilo para el encabezado del footer */
+        footer h1 {
+            font-size: 24px;
+            margin: 0;
+            border-bottom: 2px solid #ffffff;
+            padding-bottom: 5px;
+        }
+
+        /* Estilo para la sección de redes sociales */
+        .pie-pagina {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            /* Centra horizontalmente */
+            align-items: center;
+            /* Centra verticalmente */
+        }
+
+        /* Estilo para los enlaces de redes sociales */
+        .red-social {
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .red-social img {
+            width: 25px;
+            height: 25px;
+            border: 2px solid #ffffff;
+            border-radius: 50%;
+            padding: 5px;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+
+
+
+        .red-social:hover img {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <div class="contenedor">
+                <a href="#" class="logo">Portafolio Proyecto</a>
+                <ul class="menu">
+                    <li><a href="#" class="activo">Inicio</a></li>
+                    <li><a href="#">Campos de Especialización</a></li>
+                    <li><a href="#">Competencias</a></li>
+                    <li><a href="#">Programas</a></li>
+                    <li><a href="#">Referencia</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const header = document.querySelector("header");
+            header.classList.toggle("scrolling", window.scrollY > 0);
+        });
+    </script>
+</body>
+
+</html>
+
+
+<div class="contenedor">
+    <h2>Información personal</h2>
+    <div class="informacion-personal">
+        <div class="profile-picture">
+            <img src="imagenes/MariaAguilar.jpeg" alt="Imagen de perfil" style="width: 20%;">
+        </div>
+        <div class="descripcion">
+            <p>
+                Hola, soy Maria Aguilar, actualmente cursando el cuarto año de la carrera de Ingeniería en Ciencias de
+                la Computación en la Universidad Católica de Honduras (UNICAH).
+                Desde temprana edad, he sentido fascinación por la tecnología y la informática. Durante mi tiempo en la
+                universidad, he tenido la oportunidad de explorar diversas áreas de la informática, incluyendo
+                programación, inteligencia artificial y ciberseguridad.
+                Mi pasión por la programación me ha llevado a desarrollar proyectos de software y aplicaciones que
+                abordan desafíos del mundo real.
+                En resumen, mi interés abarca la programación, la inteligencia artificial y la ciberseguridad.
+                He participado en investigaciones y proyectos relacionados con la inteligencia artificial, viendo su
+                potencial para transformar industrias y resolver problemas complejos.
+                También me apasiona la ciberseguridad debido a la creciente importancia de proteger los datos en un
+                mundo digitalizado.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+</html>
+
+<div class="contenedor">
+    <div class="grid col-3">
+        <div class="span-2 med-span-3">
+            <div class="card">
+                <h1>Especialidades:</h1>
+                <ul>
+                    <li><b>Visual Studio Code:</b>Soy proficientes en el uso de Visual Studio Code para la creación de
+                        páginas web utilizando HTML y CSS.
+                        Esta herramienta es esencial para el desarrollo frontend y la creación de sitios web
+                        interactivos y receptivos.<br></br></li>
+                    <li><b>Android Studio:</b> Tengo experiencia en el desarrollo de aplicaciones móviles utilizando
+                        Android Studio.
+                        He trabajado en proyectos que van desde aplicaciones simples hasta aplicaciones más complejas
+                        con funcionalidades avanzadas.<br></br></li>
+                    <li><b>Photoshop:</b> Utilizo Photoshop para el desarrollo de diseños web y gráficos.
+                        Puedo crear interfaces de usuario atractivas y modernas, así como elementos gráficos
+                        personalizados para mejorar la estética de los sitios web y aplicaciones.<br></br></li>
+                    <p>Estas especialidades me permiten abordar proyectos de manera integral, desde la concepción hasta
+                        la implementación, garantizando que los productos finales sean funcionales y estéticamente
+                        atractivos.
+                        Estoy comprometido en seguir aprendiendo y manteniéndome al tanto de las últimas tendencias y
+                        avances en estas herramientas y tecnologías para seguir siendo un profesional competente en el
+                        campo de la informática.</p>
+                </ul>
+            </div> <br>
+            <div class="card">
+                <h1>Habilidades:</h1>
+                <ul>
+                    <b>
+                        <li>Lenguajes de programación y Tipos:</li>
+                    </b><br></br>
+                    <ol>
+                        <li><b>Visual Basic.</b>Habilidad en desarrollo de aplicaciones y scripts en Visual Basic para
+                            aplicaciones de escritorio y automatización de tareas.<br></br></li>
+                        <li><b>Python.</b> Amplia experiencia en programación en Python, utilizado para desarrollo web,
+                            análisis de datos, automatización y más.<br></br></li>
+                        <li><b>Dev C++.</b> Conocimiento en programación en C++ utilizando Dev C++ para aplicaciones de
+                            software de nivel medio y bajo.<br></br></li>
+                    </ol> <br>
+                    <li><b>Desarrollo Web:</b></li><br></br>
+                    <ol>
+                        <li><b>HTML y CSS:</b> Habilidad en el desarrollo de páginas web utilizando HTML para la
+                            estructura y CSS para el diseño y la presentación.<br></br></li>
+                        <li><b>JavaScript:</b> Experiencia en la programación con JavaScript para crear interacciones
+                            dinámicas en sitios web.<br></br></li>
+                        <li><b>Frameworks Web:</b> Familiaridad con frameworks web como Django (Python) y React
+                            (JavaScript) para el desarrollo de aplicaciones web modernas y dinámicas.<br></br></li>
+                        <li><b>Control de Versiones: </b> Uso efectivo de sistemas de control de versiones como Git para
+                            el seguimiento y colaboración en proyectos de desarrollo de software.<br></br></li>
+                    </ol> <br>
+                    <li><b>Gestión de Bases de Datos:</b></li><br></br>
+                    <ol>
+                        <li><b>Microsoft SQL Server: </b> Competencia en la administración de bases de datos en
+                            Microsoft SQL Server, incluyendo diseño de esquemas, consultas SQL complejas y
+                            optimización.<br></br></li>
+                        <li><b>PostgreSQL: </b> Experiencia en la gestión de bases de datos PostgreSQL, desde la
+                            instalación hasta la optimización y la creación de procedimientos almacenados.<br></br></li>
+                        <li><b>SQLite: </b> Conocimiento en la implementación y gestión de bases de datos SQLite,
+                            utilizado en aplicaciones móviles y proyectos de desarrollo local.<br></br></li>
+                    </ol>
+                </ul>
+            </div> <br>
+
+            <div class="card">
+                <h1>Creación de sitios web:</h1>
+                <ul>
+                    <li><b>Blog personal:</b> Creación de un blog con contenido de nicho como viajes, comida o
+                        tecnología.<br></br></li>
+                    <li><b>Portafolio en línea:</b> Diseño de un sitio web para mostrar tu trabajo y habilidades como
+                        profesional.<br></br></li>
+                    <li><b>Plataforma educativa en línea:</b> Desarrollo de un sitio web que ofrece cursos y recursos
+                        educativos en línea.<br></br></li>
+                    </ol> <br>
+                    <li><b>Diseño de interfaces gráficas:</b></li><br></br>
+                    <ol>
+                        <li><b>Diseño de una aplicación de productividad:</b> Creación de una interfaz de usuario
+                            eficiente y atractiva para una aplicación de gestión de tareas.<br></br></li><br>
+                        <li><b>Diseño de una página de inicio de sitio web:</b> Diseño de una página de inicio
+                            impactante para un sitio web corporativo.<br></br></li><br>
+                </ul>
+            </div>
+
+        </div>
+        <div class="card span-1 med-span-3">
+            <form action="#">
+                <h1>Objetivos Profesionales:</h1>
+                <ul>
+                    <li>Encontrar una organización que me permita aplicar todo el aprendizaje adquirido a lo largo de mi
+                        proceso de crecimiento.</li>
+                    <li>Tener estabilidad laboral y consolidarme en una organización que me permita aplicar mis
+                        conocimientos y habilidades, desarrollarme como profesional y que haga reconocimiento de mis
+                        logros. .</li>
+                    <li>Seguir aprendiendo todos los días, tanto de mi propia experiencia como de mis colegas.</li>
+                    <li>Liderar un equipo de trabajo que promueva el desempeño y aprendizaje colaborativo.</li>
+                    <br><br><br>
+                </ul>
+                <h1>Contáctame</h1>
+                <a href="#">📱Cel: 8862-1493</a> <br> <br>
+                <a href="#">📧Correo: mcarmenaguilar1602@gmail.com</a> <br> <br> <br> <br>
+                <legend>Datos👨‍💼</legend>
+                <input type="text" name="nombre" class="campo" placeholder="Nombre y Apellido">
+                <input type="emal" name="email" class="campo" placeholder="Correo Electronico">
+                <textarea name="mensaje" placeholder="Breve Mensaje..."></textarea>
+                <input type="submit" name="enviar" value="Enviar mensaje" class="btn-enviar">
+            </form><br>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="contenedor">
+    <main class="grid col-3 med-col-2 peq-col-1">
+        <div class="card">
+            <img src="imagenes/Visual Code.png" alt="">
+        </div>
+        <div class="card">
+            <img src="imagenes/Html logo.png" alt="">
+        </div>
+        <div class="card">
+            <img src="imagenes/Android.png" alt="">
+        </div>
+
+    </main>
+</div>
+<footer>
+    <section class="pie-pagina">
+        <footer>
+            <h1>Contacto</h1>
+            <section class="pie-pagina">
+                <a href="https://www.facebook.com" class="red-social"><img src="imagenes/Facebook.png" alt="Facebook"
+                        style="width: 60px; height: 50px;"></a>
+                <a href="https://www.instagram.com" class="red-social"><img src="imagenes/Instagram.png" alt="Instagram"
+                        style="width: 60px; height: 50px;"></a>
+                <a href="https://twitter.com" class="red-social"><img src="imagenes/Twitter.png" alt="Twitter"
+                        style="width: 60px; height: 50px;"></a>
+                <a href="https://es.linkedin.com" class="red-social"><img src="imagenes/Linkedin.png" alt="LinkedIn"
+                        style="width: 60px; height: 50px;"></a>
+                <a href="https://myaccount.google.com" class="red-social"><img src="imagenes/Google.png" alt="Google"
+                        style="width: 60px; height: 50px;"></a>
+                <a href="https://www.youtube.com" class="red-social"><img src="imagenes/Youtube.png" alt="YouTube"
+                        style="width: 60px; height: 50px;"></a>
+                <a href="https://web.whatsapp.com" class="red-social"><img src="imagenes/Whatsapp.png" alt="WhatsApp"
+                        style="width: 60px; height: 50px;"></a>
+                <a href="https://www.google.com.mx" class="red-social"><img src="imagenes/Compartir.png" alt="Compartir"
+                        style="width: 60px; height: 50px;"></a>
+
+            </section>
+        </footer>
+        </body>
+
+        </html>
